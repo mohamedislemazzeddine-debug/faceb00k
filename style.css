@@ -8,7 +8,7 @@ body {
   padding: 0;
 }
 
-.login-box, #feed {
+.login-box, .post-input, #feed {
   background: white;
   padding: 20px;
   margin: 20px;
@@ -17,12 +17,48 @@ body {
   width: 300px;
 }
 
+.post-input input {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
+}
+
+.post-input button {
+  width: 100%;
+  padding: 8px;
+  background-color: #3897f0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.post-input button:hover {
+  background-color: #2d7ccf;
+}
+
+#feed {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
 .post {
   border: 1px solid #ddd;
-  margin: 10px 0;
   padding: 10px;
+  border-radius: 8px;
 }
 
 .post img {
   width: 100%;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.post img:hover {
+  transform: scale(1.05);
+}
+
+.post p {
+  margin: 5px 0 0 0;
 }
